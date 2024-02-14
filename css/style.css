@@ -1,46 +1,55 @@
-.fundo *{
+.fundo * {
     background-color: hsl(0, 0%, 12%);
 
 }
-.fundo{
+
+.fundo {
     display: flex;
     background-color: hsl(0, 0%, 12%);
     justify-content: center;
-    align-items:center ;
+    align-items: center;
     flex-direction: column;
     width: 390px;
-    height: 500px;
+    height: auto;
     border-radius: 15px;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.avatar img{
+.comMargemTop {
+    margin-top: 100px;
+    /* Define a margem superior para 50px quando a classe é aplicada */
+    width: 560px;
+}
+
+.avatar img {
     width: 70px;
     border-radius: 50%;
     margin-top: 15px;
 }
 
-.titulo,h1{
+.titulo,
+h1 {
     font-size: 20px;
     color: hsl(0, 0%, 100%);
 }
 
-.titulo p{
-    margin-left:35px;
-    color:  hsl(75, 94%, 57%);
+.titulo p {
+    margin-left: 35px;
+    color: hsl(75, 94%, 57%);
 }
 
-.frase{
+.frase {
     color: hsl(0, 0%, 100%);
 }
 
-.link{
+.link {
     margin-top: 15px;
 }
 
-.link *{
+.link * {
     color: hsl(0, 0%, 100%);
     background-color: hsl(0, 0%, 20%);
     display: flex;
@@ -54,29 +63,190 @@
     font-weight: 600;
 }
 
-.link a:hover{
-    background-color:hsl(75,94%,57%);
+.link a:hover {
+    background-color: hsl(75, 94%, 57%);
     color: black;
-    transition: all .3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: 600;
 }
 
-.footer{
-    position: absolute; /* Define posição absoluta */
-    bottom: 0; /* Coloca no final da página */
-    left: 0; /* Alinha à esquerda */
-    width: 95%; /* Ocupa toda a largura */
-    color: white; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
+.footer {
+    position: absolute;
+    /* Define posição absoluta */
+    bottom: 1;
+    /* Coloca no final da página */
+    left: 0;
+    /* Alinha à esquerda */
+    width: 95%;
+    /* Ocupa toda a largura */
+    color: white;
+    /* Cor do texto */
+    padding: 10px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 960px;
+    background-color: transparent;
+    background: transparent;
 }
 
-.footer a{
+.footer a {
     color: white;
     text-decoration: none;
 }
 
-.footer a:hover{
+.footer a:hover {
     text-decoration: underline;
+    color: hsl(75, 94%, 57%);
 }
 
+.projetos {
+    display: none;
+    /* Começa oculta */
+    opacity: 0;
+    margin: 0;
+    /* Define a margem inicial */
+    transition: opacity 0.3s ease, margin-top 0.3s ease;
+    /* Adiciona uma transição suave para a opacidade e a margem superior */
+    background-color: transparent;
+}
+
+.projetos.mostrar {
+    display: flex;
+    /* Mostra a seção de projetos */
+    opacity: 1;
+    /* Ajusta a opacidade para mostrar */
+    margin-top: 20px;
+    /* Ajusta a margem superior quando a seção é mostrada */
+    margin: 0px;
+}
+
+
+.projetos.mostrar * {
+    /* Selecione todos os elementos dentro da seção de projetos mostrados */
+    border: none;
+    /* Adicione esta linha para remover qualquer borda */
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 20%);
+    font-weight: 600;
+    flex-direction: column;
+    margin: 0px;
+    gap: 10px;
+    padding: 8px;
+}
+
+.projetos.mostrar a {
+    margin: 0;
+    padding: 0;
+}
+
+.projetos.mostrar #gta:hover {
+
+    background:linear-gradient(to bottom, rgba(0,128,0,.8), rgba(0,255,0,.9));
+
+    color: black;
+
+    transition: background 0.3s ease, color 0.3s ease;
+
+    font-weight: 600;
+
+    padding: 10px;
+    /* Aumenta o padding durante o hover para aumentar a área de interação */
+
+    margin: -10px;
+    /* Compensa o aumento do padding na posição do elemento para evitar que ele se mova */
+}
+
+#gta{
+    color: green;
+}
+
+#to-do-list{
+    color: #7f90a8;
+}
+
+.projetos.mostrar #to-do-list:hover {
+
+    background:linear-gradient(to bottom, rgba(20, 31, 47,0.9), rgba(50,61,77,.3));
+
+    color: whitesmoke;
+
+    transition: background 0.3s ease, color 0.3s ease;
+
+    font-weight: 600;
+
+    padding: 10px;
+    /* Aumenta o padding durante o hover para aumentar a área de interação */
+
+    margin: -10px;
+    /* Compensa o aumento do padding na posição do elemento para evitar que ele se mova */
+}
+
+#nft-card{
+    color: hsl(178, 100%, 50%);
+}
+
+.projetos.mostrar #nft-card:hover {
+
+    background:linear-gradient(to bottom,rgba(0, 255, 247, 0.9), rgba(30,255,255,0.4));
+
+    color: black;
+
+    transition: background 0.4s ease, color 0.4s ease;
+
+    font-weight: 600;
+
+    padding: 10px;
+    /* Aumenta o padding durante o hover para aumentar a área de interação */
+
+    margin: -10px;
+    /* Compensa o aumento do padding na posição do elemento para evitar que ele se mova */
+}
+
+#blog-preview{
+    color: rgb(244, 208, 78);
+}
+
+.projetos.mostrar #blog-preview:hover {
+
+    background: linear-gradient(to bottom, rgba(244,208,78,1), rgba(255,220,90,0.4)) ;
+
+    color: white;
+
+    transition: background 0.3s ease, color 0.3s ease;
+
+    font-weight: 600;
+
+    padding: 10px;
+    /* Aumenta o padding durante o hover para aumentar a área de interação */
+
+    margin: -10px;
+    /* Compensa o aumento do padding na posição do elemento para evitar que ele se mova */
+}
+
+.projetos.mostrar #results-summary:hover {
+
+    background:linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0.4));
+
+    color: white;
+
+    transition: background 0.3s ease, color 0.3s ease;
+
+    font-weight: 600;
+
+    padding: 10px;
+    /* Aumenta o padding durante o hover para aumentar a área de interação */
+
+    margin: -10px;
+    /* Compensa o aumento do padding na posição do elemento para evitar que ele se mova */
+}
+
+
+#results-summary{
+    color:  hsl(234, 85%, 45%);
+}
+
+#lista-projetos {
+    background-color: transparent;
+    margin: 0;
+}
