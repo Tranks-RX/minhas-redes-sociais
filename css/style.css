@@ -120,6 +120,10 @@ h1 {
     color: hsl(75, 94%, 57%);
 }
 
+#lista-projetos span{
+    border-radius:7px;
+}
+
 .projetos {
     display: none;
     /* Começa oculta */
